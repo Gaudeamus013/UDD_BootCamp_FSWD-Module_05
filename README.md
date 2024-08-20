@@ -78,27 +78,44 @@ En `package.json` se incluyen las siguientes dependencias:
 
 ## Instrucciones de Instalación
 
-1. Clona este repositorio:
+Para estos efectos y dado que no se determinó el archivo .git, se puede hacer lo siguiente:
+
+1. Descargar el contenido como archivo ZIP:
+* Ve al repositorio en GitHub.
+* Haz clic en el botón "Code" (o "Código").
+* Selecciona "Download ZIP".
+* Esto descargará todos los archivos del repositorio en tu computadora, pero sin el historial de Git ni las funcionalidades de control de versiones.
+  
+2. Crear un nuevo repositorio Git en tu máquina local:
+Si necesitas usar Git para rastrear el código que descargaste, sigue estos pasos:
+* Extrae el archivo ZIP en tu máquina local.
+* Abre una terminal y navega hasta la carpeta donde extrajiste los archivos.
+* Inicializa un nuevo repositorio Git con:
+  
     ```bash
-    git clone https://github.com/tu-usuario/pokemon-pokedex.git
-    ```
-2. Navega al directorio del proyecto:
-    ```bash
-    cd pokemon-pokedex
-    ```
-3. Instala las dependencias:
-    ```bash
-    npm install
-    ```
-4. Configura el archivo `.env` con el puerto deseado:
-    ```
-    VITE_PORT=3000
+   git init
     ```
 
-5. Inicia el servidor de desarrollo:
+* Agrega todos los archivos al índice con:
+
     ```bash
-    npm run dev
+   git add .
     ```
+    
+* Haz tu primer commit:
+
+    ```bash
+   git commit -m "Inicializando el repositorio con archivos descargados"
+    ```
+    
+* Si deseas conectar este repositorio con un repositorio remoto en GitHub, puedes crear un nuevo repositorio en GitHub y luego añadirlo como remoto:
+
+    ```bash
+   git remote add origin https://github.com/tu-usuario/tu-nuevo-repositorio.git
+   git push -u origin master
+    ```
+    
+Esto te permitirá continuar trabajando con Git
 
 ## Estructura de Archivos Clave
 
@@ -675,6 +692,12 @@ El archivo `.env` almacena variables de entorno para la configuración del proye
 PORT=3000
 BASE_URL=https://pokeapi.co/api/v2
 ```
+
+## Despliegue
+
+La aplicación ha sido desplegada en Render.com. Puedes acceder a la aplicación en vivo en el siguiente enlace:
+
+[Pokédex - Proyecto Desplegado](https://pokedex-ej8o.onrender.com)
 
 ## Autor
 
